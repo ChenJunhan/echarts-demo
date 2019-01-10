@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/charts.css">
+  <title>charts</title>
+</head>
+<body>
+  <div id="container">
+    <ul class="tab">
+        <li class="active" data-name="#trend"><span>趋势图</span></li>   
+        <li data-name="#curve"><span>曲线图</span></li> 
+    </ul>
+
+    <div class="tab-content">
+        <!-- 趋势图 -->
+        <div id="trend">
+            <ul class="charts-list">
+                <!-- 心率趋势图 -->
+                <li id="heartRateTrend">
+                    <div class="template-header">
+                        <img src="images/dayHR2.png" alt="心率图">
+                        <span>心率趋势图</span>
+                        <p>心率<span>(次/分)</span></p>
+                    </div>
+                    <div class="template-content">
+                        <ul class="data-info clearfix">
+                            <li class="total">累计 <span>587</span></li>
+                            <li class="tallest">最高 <span>132</span></li>
+                            <li class="lowest">最低 <span>42</span></li>
+                            <li class="average">平均 <span>61</span></li>
+                        </ul>
+                        <div id="heartRateTrendChart" style="width: 100%;height:250px;"></div>
+                    </div>
+                </li>
+
+                <!-- 血压趋势图  -->
+                <li id="bloodPressureTrend">
+                    <div class="template-header">
+                        <img src="images/dayBP.png" alt="血压图">
+                        <span>血压趋势图</span>
+                        <p>血压<span>(mmHg)</span></p>
+                    </div>
+                    <div class="template-content">
+                        <ul class="data-info clearfix">
+                            <li class="total">累计 <span>44</span></li>
+                            <li class="tallest">最高 <span>111/76</span></li>
+                            <li class="lowest">最低 <span>131/76</span></li>
+                            <li class="average">平均 <span>139/80</span></li>
+                        </ul>
+                        <div id="bloodPressureTrendChart" style="width: 100%;height:250px;"></div>
+                    </div>
+                </li>
+
+                <!-- 血氧趋势图 -->
+                <li id="bloodOxygenTrend">
+                    <div class="template-header">
+                        <img src="images/dayBO.png" alt="心率图">
+                        <span>血氧趋势图</span>
+                        <p>血氧<span>(SpO2)</span></p>
+                    </div>
+                    <div class="template-content">
+                        <ul class="data-info clearfix">
+                            <li class="total">累计 <span>94</span></li>
+                            <li class="tallest">最高 <span>98%</span></li>
+                            <li class="lowest">最低 <span>63%</span></li>
+                            <li class="average">平均 <span>96%</span></li>
+                        </ul>
+                        <div id="bloodOxygenTrendChart" style="width: 100%;height:250px;"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- 曲线图  -->
+        <div id="curve">
+            <ul class="charts-list">
+                <!-- 心率曲线图 -->
+                <li id="heartRateCurve">
+                    <div class="template-header">
+                        <img src="images/dayHR2.png" alt="心率图">
+                        <span>心率曲线图</span>
+                        <p>心率<span>(次/分)</span></p>
+                    </div>
+                    <div class="template-content">
+                        <ul class="data-info clearfix">
+                            <li class="total">累计 <span>587</span></li>
+                            <li class="tallest">最高 <span>132</span></li>
+                            <li class="lowest">最低 <span>42</span></li>
+                            <li class="average">平均 <span>61</span></li>
+                        </ul>
+                        <div id="heartRateCurveChart" style="width: 100%; height:250px;"></div>
+                    </div>
+                </li>
+
+                <!-- 血压曲线图  -->
+                <li id="bloodPressureCurve">
+                    <div class="template-header">
+                        <img src="images/dayBP.png" alt="血压图">
+                        <span>血压曲线图</span>
+                        <p>血压<span>(mmHg)</span></p>
+                    </div>
+                    <div class="template-content">
+                        <ul class="data-info clearfix">
+                            <li class="total">累计 <span>44</span></li>
+                            <li class="tallest">最高 <span>111/76</span></li>
+                            <li class="lowest">最低 <span>131/76</span></li>
+                            <li class="average">平均 <span>139/80</span></li>
+                        </ul>
+                        <div id="bloodPressureCurveChart" style="width: 100%; height:250px;"></div>
+                    </div>
+                </li>
+
+                <!-- 血氧曲线图 -->
+                <li id="bloodOxygenCurve">
+                    <div class="template-header">
+                        <img src="images/dayBO.png" alt="心率图">
+                        <span>血氧曲线图</span>
+                        <p>血氧<span>(SpO2)</span></p>
+                    </div>
+                    <div class="template-content">
+                        <ul class="data-info clearfix">
+                            <li class="total">累计 <span>94</span></li>
+                            <li class="tallest">最高 <span>98%</span></li>
+                            <li class="lowest">最低 <span>63%</span></li>
+                            <li class="average">平均 <span>96%</span></li>
+                        </ul>
+                        <div id="bloodOxygenCurveChart" style="width: 100%;height:250px;"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+  </div>
+
+  <script src="https://cdn.bootcss.com/echarts/4.2.0-rc.2/echarts.common.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/charts.js"></script>
+</body>
+</html>

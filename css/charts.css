@@ -1,0 +1,146 @@
+/*! minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+img,
+embed,
+iframe,
+object,
+audio,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+  text-align: left;
+}
+.clearfix:after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+#container {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+.tab { height: 40px; }
+.tab li{
+    float: left;
+    text-align: center;
+    width: 50%;
+    line-height: 40px;
+}
+.tab li span {
+    display: inline-block;
+    height: 40px;
+    color: #666;
+}
+.tab li.active span {
+    border-bottom: 2px solid #0096FF;
+    color: #0096FF;
+}
+.tab-content {
+  background: #EDEEF3;
+  padding: 5px 10px;
+}
+#curve {
+  display: none;
+}
+.charts-list > li {
+  background: #fff;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.charts-list .template-header {
+  height: 48px;
+  line-height: 48px;
+  padding: 0 10px;
+  border-bottom: 1px solid #EAEAEA;
+}
+.charts-list .template-header > p {
+  float: right;
+  color: #666;
+}
+.charts-list .template-header > p span {
+  font-size: 12px;
+}
+.charts-list .template-header img {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+.template-content {
+  padding: 10px 15px;
+}
+.template-content .data-info li {
+  float: left;
+  margin-right: 10px;
+  font-size: 14px;
+}
