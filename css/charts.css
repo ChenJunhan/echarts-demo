@@ -79,19 +79,19 @@ th {
   padding: 0;
   text-align: left;
 }
+
 .clearfix:after {
   clear: both;
   content: '';
   display: block;
 }
-
 #container {
   max-width: 600px;
   width: 100%;
   margin: 0 auto;
 }
 .tab { height: 40px; }
-.tab li{
+.tab li {
     float: left;
     text-align: center;
     width: 50%;
@@ -144,3 +144,4 @@ th {
   margin-right: 10px;
   font-size: 14px;
 }
+

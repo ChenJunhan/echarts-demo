@@ -4,10 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/charts.css">
   <title>charts</title>
+  <style>
+    .page-head {
+        background: linear-gradient(to right, #A3B1FA, #0AC3CB);
+        color: rgb(0, 0, 0);
+        height: 64px;
+        line-height: 44px;
+        text-align: center;
+        position: fixed;
+        width: 100%;
+        max-width: 600px;
+        z-index: 999;
+        color: #fff;
+        padding-top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .page-head i{
+        float: left;
+        line-height: 44px;
+        font-size: 1.5em;
+        width: 30px;
+        height: 44px;
+        color: #fff;
+    }
+    .page-head span {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 0);
+    }
+    #container { padding-top: 64px; }
+  </style>
 </head>
 <body>
+  <div class="page-head">
+    <i class="fa fa-angle-left"></i>
+    <span>历史健康数据</span>
+  </div>
   <div id="container">
     <ul class="tab">
         <li class="active" data-name="#trend"><span>趋势图</span></li>   
@@ -136,7 +173,16 @@
     
   </div>
 
-  <script src="https://cdn.bootcss.com/echarts/4.2.0-rc.2/echarts.common.js"></script>
+  <!-- 微信 JS-SDK 如果不需要兼容微信小程序，则无需引用此 JS 文件。 --> 
+  <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+  <!-- 支付宝的 JS-SDK 防止 404 需要动态加载，如果不需要兼容支付宝小程序，则无需引用此 JS 文件。 --> 
+  <script type="text/javascript">
+    if (navigator.userAgent.indexOf('AlipayClient') > -1) { document.writeln('<script src="https://appx/web-view.min.js"' + '>' + '<' + '/' + 'script>'); } </script> 
+  <!-- 百度 JS-SDK 如果不需要兼容百度小程序，则无需引用此 JS 文件。 --> 
+  <script type="text/javascript" src="https://b.bdstatic.com/searchbox/icms/searchbox/js/swan-1.7.0.js"></script>
+  <!-- uni 的 SDK --> 
+  <script type="text/javascript" src="https://js.cdn.aliyun.dcloud.net.cn/dev/uni-app/uni.webview.0.2.2.js"></script>
+  <script src="https://echarts.baidu.com/dist/echarts.common.min.js"></script>
   <script src="js/jquery.min.js"></script>
   <script src="js/charts.js"></script>
 </body>

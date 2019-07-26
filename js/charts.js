@@ -1,5 +1,10 @@
 (function() {
 
+  // 返回按钮
+  $('.page-head i').click(function () {
+    uni.navigateBack();
+  })
+
   // 趋势图与曲线图切换
   $('.tab li').click(function() {
     $(this).addClass('active');
@@ -40,7 +45,7 @@
         }
       },
       xAxis: {
-        type: 'time',
+        type: 'value',
         boundaryGap: false,
         splitLine: {
             show: false
@@ -738,7 +743,7 @@
 
   // 初始化echarts实例
   function initCharts(chartIdName, option) {
-    var myChart = echarts.init(document.getElementById(chartIdName)); 
+    var myChart = echarts.init(document.getElementById(chartIdName), null, {renderer: 'svg'}); 
     myChart.setOption(option);   // 使用刚指定的配置项和数据显示图表。
   }
 })();
